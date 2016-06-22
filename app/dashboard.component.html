@@ -5,4 +5,8 @@
       <h4>{{hero.name}}</h4>
     </div>
   </div>
+  <button (click)="addHero()">Add New Hero</button>
+  <div *ngIf="addingHero">
+    <my-hero-detail (close)="close($event)"></my-hero-detail>
+  </div>
 </div>
